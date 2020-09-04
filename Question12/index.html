@@ -87,6 +87,17 @@
   $("span").parent().css({"color": "red", "border": "2px solid red"});
 });
       </script>
+      <script>
+        $(document).ready(function(){
+  $("#btn1").click(function(){
+    $("#Add").append(" <b>Appended text</b>.");
+  });
+
+  $("#btn2").click(function(){
+    $("ol").append("<li>Appended item</li>");
+  });
+});
+      </script>
       <style>
 #div2 {
   height: 100px;
@@ -100,6 +111,8 @@
    </head>
    
    <body>
+    <p style="font-weight: bold; color: red">Submission by Abhinav Menon 18BCE10006.</p>
+    <a href="https://github.com/not-acoder/IWP1/tree/master/Question12" style="font-weight: bold;">Plese click here to view the source code on github :)</a>
     <H1>Assignment Part 1 and 2</H1>
       <form action = "index.html" name = "myForm" onsubmit = "return(validate());">
          <table cellspacing = "2" cellpadding = "2" border = "1">
@@ -174,7 +187,7 @@
 
 
       <h1>Assignment Part 3 (JQUERY) </h1>
-      <h2>Hide ,Fade and Show Method</h2>
+      <h2>1) Hide ,Fade and Show Method</h2>
       <p id="nanda">If you click on the "Hide" button, I will disappear.</p>
 
         <button id="hide">Hide</button>
@@ -185,7 +198,7 @@
 <button id="fade">Click to fade in boxes</button><br><br>
 
 <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
-<h2>Dimensions Methon</h2>
+<h2>2) Dimensions Methon</h2>
     <div id="div2"></div>
 <br>
 
@@ -194,7 +207,7 @@
 <p>width() - returns the width of an element.</p>
 <p>height() - returns the height of an element.</p><br><br>
 
-<h2>CSS()</h2>
+<h2>3) CSS()</h2>
   <p style="background-color:#ff0000">This is a paragraph.</p>
 <p id="freen" style="background-color:#00ff00">This is a paragraph.</p>
 <p style="background-color:#0000ff">This is a paragraph.</p>
@@ -202,7 +215,7 @@
 <button id="css1">Return background-color of p</button>
 
 
-<h2>Traverse Method</h2>
+<h2>4) Traverse Method</h2>
     <div class="ancestors">
   <div style="width:500px;">div (great-grandparent)
     <ul>ul (grandparent)  
@@ -218,7 +231,22 @@
     </p> 
   </div>
 </div>
+
+<h2>5) Add and Remove</h2>
+
     
+    <p id="Add">Text will be added here</p>
+
+
+<ol>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
+
+<button id="btn1">Append text</button>
+<button id="btn2">Append list items</button>
+
 
    </body>
 </html>
