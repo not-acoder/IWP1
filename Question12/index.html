@@ -82,6 +82,11 @@
   });
 });
       </script>
+      <script>
+        $(document).ready(function(){
+  $("span").parent().css({"color": "red", "border": "2px solid red"});
+});
+      </script>
       <style>
 #div2 {
   height: 100px;
@@ -195,6 +200,25 @@
 <p style="background-color:#0000ff">This is a paragraph.</p>
 
 <button id="css1">Return background-color of p</button>
+
+
+<h2>Traverse Method</h2>
+    <div class="ancestors">
+  <div style="width:500px;">div (great-grandparent)
+    <ul>ul (grandparent)  
+      <li>li (direct parent)
+        <span>span</span>
+      </li>
+    </ul>   
+  </div>
+
+  <div style="width:500px;">div (grandparent)   
+    <p>p (direct parent)
+      <span>span</span>
+    </p> 
+  </div>
+</div>
+    
 
    </body>
 </html>
