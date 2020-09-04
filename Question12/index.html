@@ -49,17 +49,17 @@
       <script>
         $(document).ready(function(){
   $("#hide").click(function(){
-    $("p").hide();
+    $("#nanda").hide();
   });
   $("#show").click(function(){
-    $("p").show();
+    $("#nanda").show();
   });
 });
         
       </script>
       <script>
         $(document).ready(function(){
-  $("button").click(function(){
+  $("#fade").click(function(){
     $("#div1").fadeIn();
     
   });
@@ -67,11 +67,24 @@
       </script>
       <script>
         $(document).ready(function(){
-        $("button").click(function(){
-          alert("Background color = " + $("p").css("background-color"));
-        });
-      });
+  $("#display").click(function(){
+    var txt = "";
+    txt += "Width of div: " + $("#div2").width() + "</br>";
+    txt += "Height of div: " + $("#div2").height();
+    $("#div2").html(txt);
+  });
+});
       </script>
+      <style>
+#div2 {
+  height: 100px;
+  width: 300px;
+  padding: 10px;
+  margin: 3px;
+  border: 1px solid blue;
+  background-color: lightblue;
+}
+</style>
    </head>
    
    <body>
@@ -149,25 +162,25 @@
 
 
       <h1>Assignment Part 3 (JQUERY) </h1>
-      <p>If you click on the "Hide" button, I will disappear.</p>
+      <p id="nanda">If you click on the "Hide" button, I will disappear.</p>
 
         <button id="hide">Hide</button>
         <button id="show">Show</button><br><br><br>
 
         <p>Demonstrate fadeIn() with different parameters.</p>
 
-<button>Click to fade in boxes</button><br><br>
+<button id="fade">Click to fade in boxes</button><br><br>
 
 <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
 
+    <div id="div2"></div>
+<br>
 
-    <h2>CSS() method</h2>
+<button id="display">Display dimensions of div</button>
 
-<p style="background-color:#ff0000">This is a paragraph.</p>
-<p style="background-color:#00ff00">This is a paragraph.</p>
-<p style="background-color:#0000ff">This is a paragraph.</p>
-
-<button>Return background-color of p</button>
+<p>width() - returns the width of an element.</p>
+<p>height() - returns the height of an element.</p>
+  
 
    </body>
 </html>
