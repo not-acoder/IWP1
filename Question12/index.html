@@ -75,6 +75,13 @@
   });
 });
       </script>
+      <script>
+              $(document).ready(function(){
+  $("#css1").click(function(){
+    alert("Background color = " + $("#freen").css("background-color"));
+  });
+});
+      </script>
       <style>
 #div2 {
   height: 100px;
@@ -162,6 +169,7 @@
 
 
       <h1>Assignment Part 3 (JQUERY) </h1>
+      <h2>Hide ,Fade and Show Method</h2>
       <p id="nanda">If you click on the "Hide" button, I will disappear.</p>
 
         <button id="hide">Hide</button>
@@ -172,15 +180,21 @@
 <button id="fade">Click to fade in boxes</button><br><br>
 
 <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
-
+<h2>Dimensions Methon</h2>
     <div id="div2"></div>
 <br>
 
 <button id="display">Display dimensions of div</button>
 
 <p>width() - returns the width of an element.</p>
-<p>height() - returns the height of an element.</p>
-  
+<p>height() - returns the height of an element.</p><br><br>
+
+<h2>CSS()</h2>
+  <p style="background-color:#ff0000">This is a paragraph.</p>
+<p id="freen" style="background-color:#00ff00">This is a paragraph.</p>
+<p style="background-color:#0000ff">This is a paragraph.</p>
+
+<button id="css1">Return background-color of p</button>
 
    </body>
 </html>
