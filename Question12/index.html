@@ -44,10 +44,38 @@
          }
          return( true );
       }
-      </script>      
+      </script>  
+      <script src="jquery.min.js"></script>   
+      <script>
+        $(document).ready(function(){
+  $("#hide").click(function(){
+    $("p").hide();
+  });
+  $("#show").click(function(){
+    $("p").show();
+  });
+});
+        
+      </script>
+      <script>
+        $(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeIn();
+    
+  });
+});
+      </script>
+      <script>
+        $(document).ready(function(){
+        $("button").click(function(){
+          alert("Background color = " + $("p").css("background-color"));
+        });
+      });
+      </script>
    </head>
    
    <body>
+    <H1>Assignment Part 1 and 2</H1>
       <form action = "index.html" name = "myForm" onsubmit = "return(validate());">
          <table cellspacing = "2" cellpadding = "2" border = "1">
             
@@ -117,6 +145,29 @@
             </tr>
             
          </table>
-      </form>      
+      </form>  
+
+
+      <h1>Assignment Part 3 (JQUERY) </h1>
+      <p>If you click on the "Hide" button, I will disappear.</p>
+
+        <button id="hide">Hide</button>
+        <button id="show">Show</button><br><br><br>
+
+        <p>Demonstrate fadeIn() with different parameters.</p>
+
+<button>Click to fade in boxes</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+
+
+    <h2>CSS() method</h2>
+
+<p style="background-color:#ff0000">This is a paragraph.</p>
+<p style="background-color:#00ff00">This is a paragraph.</p>
+<p style="background-color:#0000ff">This is a paragraph.</p>
+
+<button>Return background-color of p</button>
+
    </body>
 </html>
