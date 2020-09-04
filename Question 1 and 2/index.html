@@ -1,0 +1,122 @@
+<html>   
+   <head>
+      <title>Form Validation</title>      
+      <script type = "text/javascript">
+         function validate() {
+      
+         if( document.myForm.Name.value == "" ) {
+            alert( "Please provide your name!" );
+            document.myForm.Name.focus() ;
+            return false;
+         } 
+          if ( ( document.myForm.gender[0].checked == false ) && ( document.myForm.gender[1].checked == false ) && ( document.myForm.gender[2].checked == false )) 
+          {
+          alert ( "Please choose your Gender: Male , Female or Other" ); 
+          return false;
+          }
+
+         if( document.myForm.EMail.value == "" ) {
+            alert( "Please provide your Email!" );
+            document.myForm.EMail.focus() ;
+            return false;
+         }
+         if( document.myForm.pass.value == "" ) {
+            alert( "Please provide your pass!" );
+            document.myForm.pass.focus() ;
+            return false;
+         }
+         if( document.myForm.Zip.value == "" || isNaN( document.myForm.Zip.value ) ||
+            document.myForm.Zip.value.length != 10 ) {
+            
+            alert( "Please provide your 10 char registration Number" );
+            document.myForm.Zip.focus() ;
+            return false;
+         }
+         if ( ( document.myForm.Hobbies[0].checked == false ) && ( document.myForm.Hobbies[1].checked == false ) )
+            {
+            alert ( "Please choose a hobby" );
+            return false;
+            }
+         
+         if( document.myForm.Country.value == "-1" ) {
+            alert( "Please provide your Branch!" );
+            return false;
+         }
+         return( true );
+      }
+      </script>      
+   </head>
+   
+   <body>
+      <form action = "index.html" name = "myForm" onsubmit = "return(validate());">
+         <table cellspacing = "2" cellpadding = "2" border = "1">
+            
+            <tr>
+               <td align = "right">Name</td>
+               <td><input type = "text" name = "Name" /></td>
+            </tr>
+            <tr>
+            <td align="right">
+                <label>Gender</label>
+            </td>
+            <td>
+                <label>
+                    <input type="radio" value="f" name="gender"> Female</label>
+                    <label>
+                    <input value="m" type="radio" name="gender"> Male</label>
+                    <label>
+                    <input value="o" type="radio" name="gender"> Other</label>
+            </td>
+            </tr>
+            <tr>
+               <td align = "right">Vit Bhopal EMail</td>
+               <td><input type = "text" name = "EMail" /></td>
+            </tr>
+            <tr>
+            <td align="right">
+                    <label for="pass">Password</label>
+            </td>
+            <td>
+                    <input type="password" id="pass" name="pass">
+            </td>
+        </tr>
+            <tr>
+               <td align = "right">Registration Number</td>
+               <td><input type = "text" name = "Zip" /></td>
+            </tr>
+            <tr>
+            <td align="right">
+                <label>Hobbies</label>
+            </td>
+            <td>
+                <label>
+                    <input type="checkbox"  name="Hobbies"> Cricket
+                </label>
+                <label>
+                    <input type="checkbox" name="Hobbies"> Football
+                </label>
+            </td>
+        </tr>
+            <tr>
+               <td align = "right">Branch</td>
+               <td>
+                  <select name = "Country">
+                     <option value = "-1" selected>[choose yours]</option>
+                     <option value = "1">CSE</option>
+                     <option value = "2">EEE</option>
+                     <option value = "3">MECH</option>
+                  </select>
+               </td>
+            </tr>
+            
+            <tr>
+               <td align = "right"></td>
+               <td><input type = "submit" value = "Submit" />
+               <input type="reset">
+               </td>
+            </tr>
+            
+         </table>
+      </form>      
+   </body>
+</html>
